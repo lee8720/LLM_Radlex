@@ -12,7 +12,7 @@ output_file = '####'
 
 # Google Gemini API Key
 genai.configure(api_key="####")
-model = genai.GenerativeModel("gemini-2.0-flash-001")
+model = genai.GenerativeModel("gemini-2.0-flash-thinking-exp-01-21")
 generation_config = genai.GenerationConfig(temperature=0.0, max_output_tokens=8192)
 
 def clean_and_parse_json(response_text):
@@ -258,4 +258,5 @@ def process_reports(input_file, output_file, reports_per_group):
     print(f"Processing completed. Total elapsed time: {total_elapsed_time:.2f} seconds.")
 
 # Process the reports
+
 process_reports(input_file, output_file, reports_per_group=5)
